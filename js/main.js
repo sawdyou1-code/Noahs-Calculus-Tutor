@@ -4090,3 +4090,48 @@ if (document.readyState === 'loading') {
 else {
     applyGridColumns();
 }
+
+// --- AFL Team Theme Selection Engine ---
+function applyAFLTeam(teamCode, teamColor) {
+    // 1. Update the CSS layout theme color variables globally
+    document.documentElement.style.setProperty('--primary-orange', teamColor);
+    
+    // 2. Convert hex value to rgb values so background neon/glow components don't break
+    let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(teamColor);
+    if (result) {
+        let r = parseInt(result[1], 16);
+        let g = parseInt(result[2], 16);
+        let b = parseInt(result[3], 16);
+        document.documentElement.style.setProperty('--primary-orange-rgb', `${r}, ${g}, ${b}`);
+    }
+
+    // 3. Swap the active UI site logo to display the correct team asset
+    // Looks for a header logo image or fallbacks to standard target classes
+    const logoImg = document.querySelector('.logo img') || 
+                    document.querySelector('.site-logo img') || 
+                    document.getElementById('main-logo');
+                    
+    if (logoImg) {
+        logoImg.src = `logos/${teamCode}.png`;
+    }
+
+    // 4. Save values directly to local client cache storage so settings persist when refreshing
+    localStorage.setItem('theme-color', teamColor);
+    localStorage.setItem('custom-logo-path', `logos/${teamCode}.png`);
+}
+
+// Ensure settings look up saved cache values automatically upon initial page window loading
+document.addEventListener("DOMContentLoaded", function() {
+    const savedColor = localStorage.getItem('theme-color');
+    const savedLogo = localStorage.getItem('custom-logo-path');
+    
+    if (savedColor) {
+        applyAFLTeam('', savedColor);
+    }
+    if (savedLogo) {
+        const logoImg = document.querySelector('.logo img') || 
+                        document.querySelector('.site-logo img') || 
+                        document.getElementById('main-logo');
+        if (logoImg) logoImg.src = savedLogo;
+    }
+});
