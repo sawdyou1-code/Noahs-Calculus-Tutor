@@ -6,16 +6,16 @@
   }
 
   :root {
-    --primary-orange: #c27c15;
-    --primary-orange-rgb: 194, 124, 21;
+    --primary-orange: #00e5ff;
+    --primary-orange-rgb: 0, 229, 255;
     --dark-bg: #0a0a0a;
     --light-text: #f6f4ef;
     --gray-text: #b5b0a6;
-    --accent-orange: #f2ab34;
-    --cursor-bg: rgba(194, 124, 21, 0.15);
-    --cursor-border: rgba(194, 124, 21, 0.5);
-    --cursor-hover-bg: rgba(194, 124, 21, 0.25);
-    --cursor-hover-border: rgba(230, 149, 0, 0.8);
+    --accent-orange: #7df3ff;
+    --cursor-bg: rgba(0, 229, 255, 0.15);
+    --cursor-border: rgba(0, 229, 255, 0.5);
+    --cursor-hover-bg: rgba(0, 229, 255, 0.25);
+    --cursor-hover-border: rgba(92, 240, 255, 0.8);
   }
 
   body {
@@ -2310,7 +2310,7 @@
   }
 
   .theme-option[data-theme="default"]::after {
-    background: linear-gradient(145deg, #c27c15, #e69500);
+    background: linear-gradient(145deg, #00e5ff, #5cf0ff);
   }
 
   .theme-option[data-theme="rainbow"]::after {
@@ -2355,7 +2355,7 @@
     height: 40px;
     border: 2px solid var(--primary-orange);
     border-radius: 6px;
-    background: var(--custom-color, #c27c15);
+    background: var(--custom-color, #00e5ff);
   }
 
   .color-input {
@@ -6234,7 +6234,7 @@ body.chat-active #chat-section #chatAppShell.chat-app-shell {
   position: fixed;
   inset: 0;
   z-index: 2147483600;
-  background: #fff;
+  background: #04060d;
   opacity: 1;
   visibility: visible;
   transition: opacity 0.45s ease, visibility 0.45s ease;
@@ -6251,7 +6251,7 @@ body.chat-active #chat-section #chatAppShell.chat-app-shell {
   height: 100%;
   border: 0;
   display: block;
-  background: #fff;
+  background: #04060d;
 }
 
 #chat-section .chat-owner-badge {

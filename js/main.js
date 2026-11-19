@@ -291,11 +291,11 @@ function injectWatermark(htmlContent, gameTitle) {
     htmlContent = htmlContent.replace(/<div[^>]*id="vanta-bg"[^>]*>.*?<\/div>/gis, '');
     htmlContent = htmlContent.replace(/<div[^>]*class="loading-content"[^>]*>.*?<\/div>/gis, '');
     const watermarkHTML = `
-		                        <!-- Downloaded From Noah's Tutoring Hub -->
+		                        <!-- Downloaded From Peer Review -->
 		                        <style>
 		                            @keyframes subtleGlow {
-		                                0%, 100% { box-shadow: 0 0 10px rgba(194, 124, 21, 0.4) !important; }
-		                                50% { box-shadow: 0 0 20px rgba(194, 124, 21, 0.6) !important; }
+		                                0%, 100% { box-shadow: 0 0 10px rgba(0, 229, 255, 0.4) !important; }
+		                                50% { box-shadow: 0 0 20px rgba(0, 229, 255, 0.6) !important; }
 		                            }
 		                        <\/style>
 		                        <div id="noahs-watermark"
@@ -306,13 +306,13 @@ function injectWatermark(htmlContent, gameTitle) {
 		                                bottom: 10px !important;
 		                                right: 10px !important;
 		                                background: rgba(0, 0, 0, 0.85) !important;
-		                                color: #c27c15 !important;
+		                                color: #00e5ff !important;
 		                                padding: 8px 12px !important;
 		                                border-radius: 5px !important;
 		                                font-family: 'Courier New', monospace !important;
 		                                font-size: 12px !important;
 		                                z-index: 2147483647 !important;
-		                                border: 1px solid #c27c15 !important;
+		                                border: 1px solid #00e5ff !important;
 		                                opacity: 0.9 !important;
 		                                pointer-events: auto !important;
 		                                cursor: pointer !important;
@@ -320,14 +320,14 @@ function injectWatermark(htmlContent, gameTitle) {
 		                                align-items: center !important;
 		                                gap: 8px !important;
 		                                backdrop-filter: blur(4px) !important;
-		                                box-shadow: 0 0 15px rgba(194, 124, 21, 0.4) !important;
+		                                box-shadow: 0 0 15px rgba(0, 229, 255, 0.4) !important;
 		                                animation: subtleGlow 3s ease-in-out infinite !important;
 		                                user-select: none !important;
 		                            ">
-		                            <img src="https://raw.githubusercontent.com/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/master/cuh.png"
-		                                 alt="Noah's Tutoring Hub"
+		                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwZTVmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2E4NTVmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNiIgZmlsbD0iIzA1MDcwZiIvPgo8cGF0aCBkPSJNMzIgNSA1NCAxOHYyOEwzMiA1OSAxMCA0NlYxOFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnKSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0yNCA0NFYyMWgxMC41YTcgNyAwIDAgMSAwIDE0SDI0IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZykiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPGNpcmNsZSBjeD0iNDMiIGN5PSI0NCIgcj0iMyIgZmlsbD0iIzAwZTVmZiIvPjwvc3ZnPg=="
+		                                 alt="Peer Review"
 		                                 style="width: 16px !important; height: 16px !important; border-radius: 3px !important; pointer-events: none !important;">
-		                            <span style="pointer-events: none !important;">Downloaded from Noah's Tutoring Hub<\/span>
+		                            <span style="pointer-events: none !important;">Downloaded from Peer Review<\/span>
 		                        <\/div>
 		                        <script>
 		                            (function() {
@@ -342,8 +342,8 @@ function injectWatermark(htmlContent, gameTitle) {
 		                                
 		                                setInterval(protectWatermark, 1000);
 		                                
-		                                console.log('%c🎮 Game: "' + gameTitle + '"', 'color: #c27c15; font-weight: bold;');
-		                                console.log('%c📚 Downloaded from Noah\'s Tutoring Hub', 'color: #e69500;');
+		                                console.log('%c🎮 Game: "' + gameTitle + '"', 'color: #00e5ff; font-weight: bold;');
+		                                console.log('%c📚 Downloaded from Peer Review', 'color: #5cf0ff;');
 		                            })();
 		                        <\/script>
 		                    `;
@@ -359,7 +359,7 @@ function injectWatermark(htmlContent, gameTitle) {
     return htmlContent;
 }
 const style = document.createElement('style');
-style.textContent = '@keyframes subtleGlow { 0%, 100% { box-shadow: 0 0 10px rgba(194, 124, 21, 0.4) !important; } 50% { box-shadow: 0 0 20px rgba(194, 124, 21, 0.6) !important; } } #noahs-watermark { animation: subtleGlow 3s ease-in-out infinite !important; } #noahs-watermark:hover { animation: none !important; box-shadow: 0 0 25px rgba(194, 124, 21, 0.8) !important; }';
+style.textContent = '@keyframes subtleGlow { 0%, 100% { box-shadow: 0 0 10px rgba(0, 229, 255, 0.4) !important; } 50% { box-shadow: 0 0 20px rgba(0, 229, 255, 0.6) !important; } } #noahs-watermark { animation: subtleGlow 3s ease-in-out infinite !important; } #noahs-watermark:hover { animation: none !important; box-shadow: 0 0 25px rgba(0, 229, 255, 0.8) !important; }';
 document.head.appendChild(style);
 function generateGameCards() {
     const allContainer = document.getElementById('allLessonsGrid');
@@ -573,7 +573,7 @@ function initCursorHover() {
     });
 }
 window.pageLoadTime = Date.now();
-window.matrixColor = '#c27c15';
+window.matrixColor = '#00e5ff';
 const canvas = document.getElementById('matrix-bg');
 const ctx = canvas ? canvas.getContext('2d') : null;
 const pathsLayer = document.getElementById('paths-layer');
@@ -613,12 +613,12 @@ function getThemePrimaryColor() {
         .getPropertyValue('--primary-orange')
         .trim();
     if (!cssColor)
-        return '#c27c15';
+        return '#00e5ff';
     if (cssColor.startsWith('#'))
         return cssColor;
     const parsedRgb = rgbStringToObject(cssColor);
     if (!parsedRgb)
-        return '#c27c15';
+        return '#00e5ff';
     return `#${[parsedRgb.r, parsedRgb.g, parsedRgb.b]
         .map(v => Math.max(0, Math.min(255, v)).toString(16).padStart(2, '0'))
         .join('')}`;
@@ -1678,7 +1678,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 3000);
 });
 const schoolSubjects = ["Math", "Science", "English", "History", "Biology", "Chemistry", "Physics", "Calculus", "Algebra", "Geometry", "Literature", "Spanish", "French", "Art", "Music", "Computer Science", "Economics", "Psychology", "Statistics"];
-const activeIcon = "https://raw.githubusercontent.com/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/master/cuh.png";
+const activeIcon = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwZTVmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2E4NTVmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNiIgZmlsbD0iIzA1MDcwZiIvPgo8cGF0aCBkPSJNMzIgNSA1NCAxOHYyOEwzMiA1OSAxMCA0NlYxOFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnKSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0yNCA0NFYyMWgxMC41YTcgNyAwIDAgMSAwIDE0SDI0IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZykiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPGNpcmNsZSBjeD0iNDMiIGN5PSI0NCIgcj0iMyIgZmlsbD0iIzAwZTVmZiIvPjwvc3ZnPg==";
 const inactiveIcon = "https://raw.githubusercontent.com/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/master/images/fruh.png";
 let currentSubject = getRandomSubject();
 function getRandomSubject() {
@@ -1704,7 +1704,7 @@ function setFavicon(iconUrl) {
 function updateTitle() {
     if (!document.hidden) {
         currentSubject = getRandomSubject();
-        document.title = `Noahs Tutoring | ${currentSubject}`;
+        document.title = `Peer Review | ${currentSubject}`;
     }
     else {
         document.title = "Home";
@@ -1723,14 +1723,14 @@ document.addEventListener('visibilitychange', function () {
     }
     else {
         currentSubject = getRandomSubject();
-        document.title = `Noahs Tutoring | ${currentSubject}`;
-        setFavicon('https://raw.githubusercontent.com/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/master/cuh.png');
+        document.title = `Peer Review | ${currentSubject}`;
+        setFavicon('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwZTVmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2E4NTVmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNiIgZmlsbD0iIzA1MDcwZiIvPgo8cGF0aCBkPSJNMzIgNSA1NCAxOHYyOEwzMiA1OSAxMCA0NlYxOFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnKSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0yNCA0NFYyMWgxMC41YTcgNyAwIDAgMSAwIDE0SDI0IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZykiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPGNpcmNsZSBjeD0iNDMiIGN5PSI0NCIgcj0iMyIgZmlsbD0iIzAwZTVmZiIvPjwvc3ZnPg==');
     }
 });
 setInterval(function () {
     if (!document.hidden) {
         currentSubject = getRandomSubject();
-        document.title = `Noahs Tutoring | ${currentSubject}`;
+        document.title = `Peer Review | ${currentSubject}`;
     }
 }, 30000);
 window.addEventListener('load', function () {
@@ -1859,7 +1859,7 @@ window.addEventListener('beforeunload', (event) => {
 let cursorEnabled = true;
 let cursorStyle = 'ring';
 const themeColors = {
-    'default': '#c27c15',
+    'default': '#00e5ff',
     'theme-rainbow': '#ff0080',
     'theme-cyber-green': '#00ff00',
     'theme-ice-blue': '#00ccff',
@@ -1950,8 +1950,8 @@ function initializeSettings() {
         }
         else {
             currentSubject = getRandomSubject();
-            document.title = `Noahs Tutoring | ${currentSubject}`;
-            setFavicon('https://raw.githubusercontent.com/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/master/cuh.png');
+            document.title = `Peer Review | ${currentSubject}`;
+            setFavicon('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwZTVmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2E4NTVmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNiIgZmlsbD0iIzA1MDcwZiIvPgo8cGF0aCBkPSJNMzIgNSA1NCAxOHYyOEwzMiA1OSAxMCA0NlYxOFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnKSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0yNCA0NFYyMWgxMC41YTcgNyAwIDAgMSAwIDE0SDI0IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZykiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPGNpcmNsZSBjeD0iNDMiIGN5PSI0NCIgcj0iMyIgZmlsbD0iIzAwZTVmZiIvPjwvc3ZnPg==');
         }
     });
     setTimeout(updateCursorColors, 100);
@@ -1983,7 +1983,7 @@ function applySavedTheme(themeName) {
         body.classList.add(`theme-${themeName}`);
     }
     if (themeName === 'custom') {
-        const customColor = localStorage.getItem('customThemeColor') || '#c27c15';
+        const customColor = localStorage.getItem('customThemeColor') || '#00e5ff';
         applyCustomThemeColors(customColor);
         document.getElementById('customColorInput').style.display = 'flex';
     }
@@ -2008,7 +2008,7 @@ function selectPresetTheme(themeName) {
         body.classList.add(`theme-${themeName}`);
     }
     if (themeName === 'custom') {
-        const customColor = localStorage.getItem('customThemeColor') || '#c27c15';
+        const customColor = localStorage.getItem('customThemeColor') || '#00e5ff';
         applyCustomThemeColors(customColor);
         document.getElementById('customColorInput').style.display = 'flex';
     }
@@ -2039,7 +2039,7 @@ function selectPresetTheme(themeName) {
 }
 function updateLogoForCurrentTheme() {
     const currentTheme = localStorage.getItem('selectedTheme') || 'default';
-    const defaultLogo = "https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/images/logo.png";
+    const defaultLogo = "images/peer-review-logo.svg";
     document.querySelectorAll('.logo, .home-logo').forEach(logoEl => {
         logoEl.src = defaultLogo;
         logoEl.dataset.baseSrc = defaultLogo;
@@ -2087,7 +2087,7 @@ function applyCustomTheme() {
         return;
     const hexColor = hexInput.value.trim();
     if (!applyCustomThemeColors(hexColor)) {
-        alert('Please enter a valid hex color (e.g., #c27c15)');
+        alert('Please enter a valid hex color (e.g., #00e5ff)');
         hexInput.style.borderColor = '#ff4444';
         setTimeout(() => hexInput.style.borderColor = '', 1000);
         return;
@@ -2248,7 +2248,7 @@ function tintLogoElementExact(logoEl, r, g, b) {
     const isDefaultColor = r === 194 && g === 124 && b === 21;
     if (isDefaultTheme || isDefaultColor) {
         const baseSrc = logoEl.dataset.baseSrc ||
-            "https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/images/logo.png";
+            "images/peer-review-logo.svg";
         if (logoEl.src !== baseSrc) {
             logoEl.src = baseSrc;
         }
@@ -2320,7 +2320,7 @@ function tintLogoElementExact(logoEl, r, g, b) {
 function syncLogoThemeTone() {
     const currentTheme = localStorage.getItem('selectedTheme') || 'default';
     if (currentTheme === 'default') {
-        const defaultLogo = "https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/images/logo.png";
+        const defaultLogo = "images/peer-review-logo.svg";
         document.querySelectorAll('.logo, .home-logo').forEach(logoEl => {
             if (logoEl.src !== defaultLogo) {
                 logoEl.src = defaultLogo;
@@ -2338,7 +2338,7 @@ function updateMatrixTheme() {
     refreshActiveBackground();
 }
 function revertLogo() {
-    const defaultLogo = "https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/images/logo.png";
+    const defaultLogo = "images/peer-review-logo.svg";
     const logoPreview = document.getElementById('logoPreview');
     const previewImg = logoPreview.querySelector('img');
     previewImg.src = defaultLogo;
@@ -2358,7 +2358,7 @@ function revertLogo() {
     }, 1500);
 }
 function revertFavicon() {
-    const defaultFavicon = "https://raw.githubusercontent.com/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/master/cuh.png";
+    const defaultFavicon = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwZTVmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2E4NTVmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNiIgZmlsbD0iIzA1MDcwZiIvPgo8cGF0aCBkPSJNMzIgNSA1NCAxOHYyOEwzMiA1OSAxMCA0NlYxOFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnKSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0yNCA0NFYyMWgxMC41YTcgNyAwIDAgMSAwIDE0SDI0IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZykiIHN0cm9rZS13aWR0aD0iNC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPGNpcmNsZSBjeD0iNDMiIGN5PSI0NCIgcj0iMyIgZmlsbD0iIzAwZTVmZiIvPjwvc3ZnPg==";
     const defaultInactiveFavicon = "https://raw.githubusercontent.com/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/master/images/fruh.png";
     const titleInput = document.getElementById('customTitle');
     const faviconInput = document.getElementById('customFavicon');
@@ -2399,7 +2399,7 @@ function initializeSettings() {
             body.classList.add(`theme-${savedTheme}`);
         }
         if (savedTheme === 'custom') {
-            const customColor = localStorage.getItem('customThemeColor') || '#c27c15';
+            const customColor = localStorage.getItem('customThemeColor') || '#00e5ff';
             applyCustomThemeColors(customColor);
         }
         else {
@@ -3048,7 +3048,7 @@ function getAllSettings() {
     return {
         version: '2.0',
         exportDate: new Date().toISOString(),
-        siteName: "Noah's Tutoring Hub",
+        siteName: "Peer Review",
         exportType: 'site-data',
         localStorageData: localData,
         sessionStorageData: sessionData,
@@ -3057,7 +3057,7 @@ function getAllSettings() {
         settings: {
             selectedTheme: localData.selectedTheme || 'default',
             selectedBackground: localData.selectedBackground || 'matrix',
-            customThemeColor: localData.customThemeColor || '#c27c15',
+            customThemeColor: localData.customThemeColor || '#00e5ff',
             cursorEnabled: localData.cursorEnabled || 'true',
             cursorStyle: localData.cursorStyle || 'ring',
             inactiveTabTitle: localData.inactiveTabTitle || 'Home',
@@ -3200,7 +3200,7 @@ function applyImportedSettings(importedSettings) {
         : {
             selectedTheme: localStorage.getItem('selectedTheme') || 'default',
             selectedBackground: localStorage.getItem('selectedBackground') || 'matrix',
-            customThemeColor: localStorage.getItem('customThemeColor') || '#c27c15',
+            customThemeColor: localStorage.getItem('customThemeColor') || '#00e5ff',
             cursorEnabled: localStorage.getItem('cursorEnabled') || 'true',
             cursorStyle: localStorage.getItem('cursorStyle') || 'ring',
             inactiveTabTitle: localStorage.getItem('inactiveTabTitle') || 'Home',
@@ -3229,7 +3229,7 @@ function applyImportedSettings(importedSettings) {
         body.classList.add(`theme-${selectedTheme}`);
     }
     if (selectedTheme === 'custom') {
-        const customColor = settings.customThemeColor || '#c27c15';
+        const customColor = settings.customThemeColor || '#00e5ff';
         applyCustomThemeColors(customColor);
         const colorPreview = document.getElementById('colorPreview');
         const hexInput = document.getElementById('customHexInput');
@@ -3266,7 +3266,7 @@ function applyImportedSettings(importedSettings) {
         setSiteLogos(settings.customLogo);
     }
     else {
-        const defaultLogo = "https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/images/logo.png";
+        const defaultLogo = "images/peer-review-logo.svg";
         const logoPreview = document.getElementById('logoPreview');
         setSiteLogos(defaultLogo);
         if (logoPreview) {
@@ -3353,7 +3353,7 @@ function createGameLoadingScreen(gameTitle) {
     let primaryColor, accentColor, darkColor;
     const currentTheme = localStorage.getItem('selectedTheme') || 'default';
     if (currentTheme === 'custom') {
-        const customColor = localStorage.getItem('customThemeColor') || '#c27c15';
+        const customColor = localStorage.getItem('customThemeColor') || '#00e5ff';
         primaryColor = customColor;
         const hex = customColor.replace('#', '');
         const r = parseInt(hex.slice(0, 2), 16);
@@ -3370,7 +3370,7 @@ function createGameLoadingScreen(gameTitle) {
     }
     else {
         const themeColors = {
-            'default': { primary: '#c27c15', accent: '#e69500', dark: '#1a1a1a' },
+            'default': { primary: '#00e5ff', accent: '#5cf0ff', dark: '#1a1a1a' },
             'rainbow': { primary: '#ff0080', accent: '#ff00ff', dark: '#0a0a0a' },
             'cyber-green': { primary: '#00ff00', accent: '#00cc00', dark: '#000000' },
             'ice-blue': { primary: '#00ccff', accent: '#0088cc', dark: '#001122' },
@@ -3393,7 +3393,7 @@ function createGameLoadingScreen(gameTitle) {
                 return hex.length === 1 ? '0' + hex : hex;
             }).join('');
         }
-        return '#c27c15';
+        return '#00e5ff';
     }
     function rgbToNumber(color) {
         if (color.startsWith('#')) {
@@ -3403,7 +3403,7 @@ function createGameLoadingScreen(gameTitle) {
             const rgb = color.match(/\d+/g);
             return (parseInt(rgb[0]) << 16) + (parseInt(rgb[1]) << 8) + parseInt(rgb[2]);
         }
-        return 0xc27c15;
+        return 0x00e5ff;
     }
     const primaryHex = colorToHex(primaryColor);
     const accentHex = colorToHex(accentColor);

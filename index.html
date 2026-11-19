@@ -4,40 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Noahs Tutoring | Math</title>
-  <link href="cuh.png" id="siteFavicon" rel="icon" type="image/x-icon">
-  <link href="cuh.png" rel="shortcut icon">
-  <link href="cuh.png" rel="apple-touch-icon">
-  <meta content="#c27c15" name="theme-color">
-  <meta content="Noah's Tutoring Hub" property="og:site_name">
-  <meta content="Noah's Tutoring Hub | 400+ Unblocked Games & Lessons" property="og:title">
+  <title>Peer Review | Math</title>
+  <link href="images/peer-review-mark.svg" id="siteFavicon" rel="icon" type="image/x-icon">
+  <link href="images/peer-review-mark.svg" rel="shortcut icon">
+  <link href="images/peer-review-mark.svg" rel="apple-touch-icon">
+  <meta content="#00e5ff" name="theme-color">
+  <meta content="Peer Review" property="og:site_name">
+  <meta content="Peer Review | 400+ Games & Lessons" property="og:title">
   <meta
-    content="Access hundreds of unblocked games, educational tools, and math lessons. The ultimate hub for students!"
+    content="Hundreds of games, educational tools and math lessons, all in one futuristic hub."
     property="og:description">
-  <meta content="https://noahs-calculus-tutor.pages.dev/" property="og:url">
+  <meta content="/" property="og:url">
   <meta content="website" property="og:type">
   <meta
-    content="https://raw.githubusercontent.com/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/refs/heads/master/images/OG%20noahstutoring.png"
+    content="images/peer-review-logo.svg"
     property="og:image">
   <meta content="1200" property="og:image:width">
   <meta content="630" property="og:image:height">
-  <meta content="Noah's Tutoring Hub - Unblocked Games & Educational Resources" property="og:image:alt">
+  <meta content="Peer Review - Games & Educational Resources" property="og:image:alt">
   <meta content="en_US" property="og:locale">
   <meta content="summary_large_image" name="twitter:card">
-  <meta content="Noah's Tutoring Hub | 400+ Unblocked Games" name="twitter:title">
-  <meta content="The best collection of unblocked games and educational resources for students."
+  <meta content="Peer Review | 400+ Games" name="twitter:title">
+  <meta content="Games, educational tools and math lessons in one futuristic hub."
     name="twitter:description">
   <meta
-    content="https://raw.githubusercontent.com/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/refs/heads/master/images/OG%20noahstutoring.png"
+    content="images/peer-review-logo.svg"
     name="twitter:image">
-  <meta content="Noah's Tutoring Hub Banner" name="twitter:image:alt">
+  <meta content="Peer Review Banner" name="twitter:image:alt">
   <meta
-    content="Noah's Tutoring Hub - Access hundreds of unblocked games, math lessons, and educational resources. Perfect for students looking for fun learning tools."
+    content="Peer Review - Access hundreds of unblocked games, math lessons, and educational resources. Perfect for students looking for fun learning tools."
     name="description">
   <meta content="unblocked games, tutoring, math help, educational games, student resources, online learning"
     name="keywords">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="css/peer-review.css" rel="stylesheet">
   <style>
     .popup-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; display: none; align-items: center; justify-content: center; font-family: 'Courier New', monospace; }
     .popup-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); animation: fadeIn 0.3s ease; }
@@ -67,35 +69,8 @@
 </head>
 
 <body>
-  <div id="staticPopup" class="popup-modal">
-    <div class="popup-overlay"></div>
-    <div class="popup-container">
-      <div class="popup-content">
-        <div class="popup-header">
-          <h2 class="popup-title">NOAHS TUTORING HUB STATIC</h2>
-        </div>
-        <div class="popup-body">
-          <p>Welcome to <span class="popup-highlight">Noahs Tutoring Hub Static</span> — this version is completely static, with most of the games from the live site.</p>
-          <p>This version does not have as many features as the live site and will hardly have any updates.</p>
-          <div class="popup-divider"></div>
-          <p class="popup-discord-text">If you want to use the real site, click the link below or find more in our Discord:</p>
-          <a href="https://discord.com/invite/UKUxQ5SA7N" target="_blank" rel="noopener noreferrer" class="popup-discord-btn">
-            <i class="fab fa-discord"></i> discord.gg/UKUxQ5SA7N
-          </a>
-          <a href="https://noahstutoring.academy" target="_blank" rel="noopener noreferrer" class="popup-live-btn">
-            <i class="fas fa-globe"></i> noahstutoring.academy
-          </a>
-        </div>
-        <div class="popup-footer">
-          <button class="popup-continue-btn" onclick="closeStaticPopup()">
-            Continue to this version <i class="fas fa-arrow-right"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="site-startup-loader" id="siteStartupLoader" aria-hidden="false">
-    <iframe class="site-startup-loader-frame" src="loader.html" title="Loading Noah's Tutoring"></iframe>
+    <iframe class="site-startup-loader-frame" src="loader.html" title="Loading Peer Review"></iframe>
   </div>
   <div id="custom-scrollbar">
     <div id="custom-scrollbar-track">
@@ -115,8 +90,8 @@
       <div class="top-bar">
         <div class="logo-container" onclick="switchTab('lessons')" role="button" tabindex="0"
           onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();switchTab('lessons');}">
-          <img alt="Noah's Tutoring Hub" class="logo"
-            src="https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/images/logo.png">
+          <img alt="Peer Review" class="logo"
+            src="images/peer-review-logo.svg">
         </div>
         <div class="top-nav-actions">
           <div class="nav-tabs">
@@ -129,8 +104,8 @@
     <section id="home-section">
       <div class="home-hero">
         <div class="home-logo-wrap" id="homeLogoWrap">
-          <img alt="Noah's Tutoring Hub" class="home-logo"
-            src="https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/images/logo.png">
+          <img alt="Peer Review" class="home-logo"
+            src="images/peer-review-logo.svg">
           <div class="home-logo-shine" id="homeLogoShine"></div>
         </div>
         <p class="home-subtitle"><span id="typing-quote"></span><span class="cursor">|</span></p>
@@ -171,7 +146,7 @@
             </div>
             <div class="theme-preview">
               <div class="theme-option active" data-theme="default" onclick="selectPresetTheme('default')"
-                title="Default Orange"></div>
+                title="Default Cyan"></div>
               <div class="theme-option" data-theme="rainbow" onclick="selectPresetTheme('rainbow')" title="Rainbow">
               </div>
               <div class="theme-option" data-theme="cyber-green" onclick="selectPresetTheme('cyber-green')"
@@ -190,7 +165,7 @@
             </div>
             <div class="color-input-container" id="customColorInput" style="display: none;">
               <div class="color-preview" id="colorPreview"></div><input class="color-input" id="customHexInput"
-                maxlength="7" placeholder="#c27c15" type="text"> <button class="apply-btn"
+                maxlength="7" placeholder="#00e5ff" type="text"> <button class="apply-btn"
                 onclick="applyCustomTheme()">Apply Color</button>
             </div>
           </div>
@@ -323,20 +298,15 @@
     </section>
     <footer class="site-footer">
       <div class="site-footer-left">
-        <p>© 2026 Noah's Tutoring Hub.</p>
-        <p>Site mostly coded by <a class="site-footer-link" href="https://1key.lol" target="_blank" rel="noopener noreferrer">1key</a>.</p>
+        <p>© 2026 Peer Review.</p>
+        <p>Built on code by <a class="site-footer-link" href="https://1key.lol" target="_blank" rel="noopener noreferrer">1key</a>.</p>
       </div>
       <nav class="site-footer-center" aria-label="Legal">
         <a class="site-footer-link site-footer-legal-link" href="/privacy">Privacy Policy</a>
         <a class="site-footer-link site-footer-legal-link" href="/terms">Terms of Service</a>
         <a class="site-footer-link site-footer-legal-link" href="/dmca">DMCA</a>
       </nav>
-      <div class="site-footer-right">
-        <a aria-label="Discord" class="site-footer-link site-footer-icon" href="https://discord.gg/pCGQ8vrKza" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
-        <a aria-label="GitHub" class="site-footer-link site-footer-icon" href="https://github.com/NoahsAmazingTutoringHelp" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-        <a aria-label="TikTok" class="site-footer-link site-footer-icon" href="https://www.tiktok.com/@noahstutoringhub" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
-        <a aria-label="YouTube" class="site-footer-link site-footer-icon" href="https://www.youtube.com/@noahstutoringhub" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-      </div>
+      <div class="site-footer-right"><span class="pr-status"><i></i>SYSTEM ONLINE</span></div>
     </footer>
   </div>
   <div class="game-page" id="gamePage">
@@ -391,7 +361,6 @@
     }
     document.addEventListener('DOMContentLoaded', function () {
       if (!localStorage.getItem('staticPopupShown')) {
-        setTimeout(showStaticPopup, 3500);
       }
     });
     document.addEventListener('click', function (e) {
